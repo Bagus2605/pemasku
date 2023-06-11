@@ -22,7 +22,7 @@ if (!$cek>=1) {
 }elseif ($password!=$password_confirmation){
     ?>
     <script type="text/javascript">
-        alert ('Data gagal diubah');
+        alert ('Maaf data anda gagal diubah');
         window.location="../profile.php"
     </script>
     <?php

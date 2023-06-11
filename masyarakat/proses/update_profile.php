@@ -16,14 +16,14 @@ $query = mysqli_query($host,"UPDATE masyarakat SET nik='$nik', nama='$nama', ema
 if ($query) {
     ?>
     <script type="text/javascript">
-        alert ('Data berhasil diubah, Silahkan login kembali');
+        alert ('Data anda berhasil diubah, Silahkan login kembali');
         window.location="logout.php"
     </script>
     <?php
 }else {
     ?>
     <script type="text/javascript">
-        alert ('Data gagal diubah');
+        alert ('Data anda gagal diubah');
         window.location="../profile.php"
     </script>
     <?php
