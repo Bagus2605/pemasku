@@ -5,7 +5,7 @@
             <div class="col-7 mt-4">
                 <?php 
                 require "../koneksi.php";
-                $proses=mysqli_query($host,"SELECT*FROM tanggapan INNER JOIN pengaduan ON tanggapan.id_pengaduan=pengaduan.id_pengaduan INNER JOIN masyarakat ON pengaduan.nik=masyarakat.nik INNER JOIN petugas ON tanggapan.id_petugas=petugas.id_petugas WHERE pengaduan.id_pengaduan='$_GET[id_tanggapan]'");
+                $proses=mysqli_query($host,"SELECT*FROM tanggapan INNER JOIN pengaduan ON tanggapan.id_pengaduan=pengaduan.id_pengaduan INNER JOIN masyarakat ON pengaduan.nik=masyarakat.nik INNER JOIN petugas ON tanggapan.id_petugas=petugas.id_petugas WHERE pengaduan.id_pengaduan='$_GET[id_tanggapan]' OR id_tanggapan='$_GET[id_tanggapan]'");
                 $data=mysqli_fetch_array($proses);
                 if ($proses) {
                     ?>
@@ -82,7 +82,7 @@
             <div class="col-5"></div>
         </div>
             
-        <a href="tanggapan.php" class="btn btn-primary mt-4">Kembali</a>
+        <a href="tanggapan-masyarakat.php" class="btn btn-primary mt-4">Kembali</a>
         </form>
         </div>
         <?php
