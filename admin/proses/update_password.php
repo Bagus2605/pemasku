@@ -22,7 +22,7 @@ if (!$cek>=1) {
 }elseif ($password!=$password_confirmation){
     ?>
     <script type="text/javascript">
-        alert ('Data gagal diubah');
+        alert ('Data anda gagal diubah');
         window.location="../profile.php"
     </script>
     <?php
@@ -31,14 +31,14 @@ if (!$cek>=1) {
     if ($query) {
         ?>
     <script type="text/javascript">
-        alert ('Password berhasil diubah, Silahkan login kembali');
+        alert ('Password anda berhasil diubah, Silahkan login kembali');
         window.location="logout.php"
     </script>
     <?php
     }else {
         ?>
         <script type="text/javascript">
-            alert ('Password gagal diubah, silahkan coba kembali');
+            alert ('Password anda gagal diubah, silahkan coba kembali');
             window.location="../profile.php"
         </script>
         <?php

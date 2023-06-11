@@ -15,14 +15,14 @@ $query = mysqli_query($host,"UPDATE petugas SET nama_user='$nama', email='$email
 if ($query) {
     ?>
     <script type="text/javascript">
-        alert ('Data berhasil diubah, Silahkan login kembali');
+        alert ('Data anda berhasil diubah, Silahkan login kembali');
         window.location="logout.php"
     </script>
     <?php
 }else {
     ?>
     <script type="text/javascript">
-        alert ('Data gagal diubah');
+        alert ('Data anda gagal diubah');
         window.location="../profile.php"
     </script>
     <?php

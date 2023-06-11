@@ -22,7 +22,7 @@ if (!$cek>=1) {
 }elseif ($password!=$password_confirmation){
     ?>
     <script type="text/javascript">
-        alert ('Data gagal diubah');
+        alert ('Data anda gagal diubah');
         window.location="../../admin.php?url=editpetugas&id_petugas=<?php echo $id?>"
     </script>
     <?php
@@ -31,7 +31,7 @@ if (!$cek>=1) {
     if ($query) {
         ?>
     <script type="text/javascript">
-        alert ('Password berhasil diubah');
+        alert ('Password anda berhasil diubah');
         window.location="../../admin.php"
     </script>
     <?php
