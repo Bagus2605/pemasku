@@ -9,7 +9,7 @@
                 $data=mysqli_fetch_array($proses);
                 if ($proses) {
                     ?>
-            
+
                 <div class="row">
                     <div class="col-4">
                         <label for="" class="">Nama Pengadu </label>
@@ -22,14 +22,16 @@
                         <label for="" class="">Tanggal Pengaduan </label>
                     </div>
                     <div class="col-8 mt-2">
-                        <input type="text" class="form-control" value="<?php echo date('d-m-Y', strtotime($data['tgl_pengaduan']))?>" readonly>
+                        <input type="text" class="form-control"
+                            value="<?php echo date('d-m-Y', strtotime($data['tgl_pengaduan']))?>" readonly>
                     </div>
 
                     <div class="col-4 mt-2">
                         <label for="" class="">Isi Laporan </label>
                     </div>
                     <div class="col-8 mt-2">
-                        <textarea type="text" class="form-control" rows="6" readonly><?php echo $data['isi_laporan']?></textarea>
+                        <textarea type="text" class="form-control" rows="6"
+                            readonly><?php echo $data['isi_laporan']?></textarea>
                     </div>
                 </div>
             </div>
@@ -37,57 +39,61 @@
                 <div class="imgtanggapi">
                     <?php if ($data['foto']=="") {
                         ?>
-                        <h2>Tidak Ada Foto</h2>
-                        <?php
+                    <h2>Tidak Ada Foto</h2>
+                    <?php
                     }else {
                         ?>
-                        <div class="imgtanggapi">
+                    <div class="imgtanggapi">
                         <img src="../asset/img/aduan/<?php echo $data['foto']?>" alt="">
-                        </div>
-                        <?php
+                    </div>
+                    <?php
                     }
                     ?>
-                    
-                    
+
+
                 </div>
             </div>
         </div>
         <form action="" method="POST">
-        <label for="" class=""><h2 style="font-family:'poppins'">Tanggapan</h2></label>
-        <div class="row">
-            <div class="col-7 mt-4">
-                <div class="row">
-                    <div class="col-4">
-                        <label for="" class="">Nama Petugas </label>
-                    </div>
-                    <div class="col-8">
-                        <input type="text" class="form-control" value="<?php echo $data['nama_user']?>" readonly>
-                    </div>
+            <label for="" class="">
+                <h2 style="font-family:'poppins'">Tanggapan</h2>
+            </label>
+            <div class="row">
+                <div class="col-7 mt-4">
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="" class="">Nama Petugas </label>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" class="form-control" value="<?php echo $data['nama_user']?>" readonly>
+                        </div>
 
-                    <div class="col-4 mt-2">
-                        <label for="" class="">Tanggal Tanggapan </label>
-                    </div>
-                    <div class="col-8 mt-2">
-                        <input type="text" class="form-control" value="<?php echo date('d-m-Y', strtotime($data['tgl_tanggapan']))?>" readonly>
-                    </div>
+                        <div class="col-4 mt-2">
+                            <label for="" class="">Tanggal Tanggapan </label>
+                        </div>
+                        <div class="col-8 mt-2">
+                            <input type="text" class="form-control"
+                                value="<?php echo date('d-m-Y', strtotime($data['tgl_tanggapan']))?>" readonly>
+                        </div>
 
-                    <div class="col-4 mt-2">
-                        <label for="" class="">Isi Tanggapan</label>
-                    </div>
-                    <div class="col-8 mt-2">
-                        <textarea type="text" class="form-control" rows="6" readonly><?php echo $data['tanggapan']?></textarea>
+                        <div class="col-4 mt-2">
+                            <label for="" class="">Isi Tanggapan</label>
+                        </div>
+                        <div class="col-8 mt-2">
+                            <textarea type="text" class="form-control" rows="6"
+                                readonly><?php echo $data['tanggapan']?></textarea>
+                        </div>
                     </div>
                 </div>
+                <div class="col-5"></div>
             </div>
-            <div class="col-5"></div>
-        </div>
-            
-        <a href="tanggapan.php" class="btn btn-primary mt-4">Kembali</a>
+
+            <a href="tanggapan.php" class="btn btn-primary mt-4">Kembali</a>
         </form>
-        </div>
-        <?php
+    </div>
+    <?php
             }
         ?>
-        
-    </div>
+
+</div>
 </div>
