@@ -158,7 +158,7 @@ if (isset($_GET['url'])) {
                 <td><?php echo $datamas['username']?></td>
                 <td class="text-center"><?php echo $datamas['telp']?></td>
                 <td class="text-center">
-                  <a href="proses/hapus.php" class="btn btn-sm btn-danger">Hapus</a>
+                  <a href="proses/adminmagic/hapusmas.php?id=<?php echo $datamas['nik']?>" class="btn btn-sm btn-danger" class="btn btn-sm btn-danger" onclick="return confirm('Yakin Mau Dihapus?')" class="btn btn-sm btn-danger">Hapus</a>
                 </td>
             </tr>
             <?php
